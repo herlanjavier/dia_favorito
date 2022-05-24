@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Herlan</title>
+</head>
+<body>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: antiquewhite;
+		}
+h1{
+background-color: #bd9f34;
+color: white;
+text-align: center;
+}
+.res{
+	padding: 15px;
+	margin: 5px;
+	text-align: center;
+	color: #354229;
+	font-size: 24px;
+}
+body section button{
+    background-color: #af8b4c;
+    border: none;
+	color: white;
+	padding: none;
+	padding: 10px 20px;
+	font-size: 20px;
+	min-width: 10%;
+	border-radius: 10px;
+	text-decoration: none;
+	margin: 2px 5px;
+	cursor: pointer;
+}
+	
+body section button:hover{
+	background-color: #5e4caf;
+}
+	</style>
+	</head>
+	
+	<body>
+		<header><h1>Calcular el dia favorito</h1></header>
+		<section class="res">
+		<br><br><br>
+		<input type="number" id="nro1">
+		<button id="btn">Calcular</button>
+		<br><br><br>
+		<h2>Tu dia favorito es :</p>
+		<div id="resultado"></div>
+	
+		<script>
+			//  registra un evento 
+			var b=document.getElementById('btn');
+			b.addEventListener('click',dias);
+	
+			function dias() 
+			{
+				var n1=parseInt(document.getElementById('nro1').value);
+				var dias = [" Lunes "," Martes "," Miercoles "," Jueves "," Viernes "," Sabado "," Domingo "]
+				var s=n1-1
+				if(s>=0 && s<7){
+					r="Tu dia favorito es"+dias[s];
+				}
+				else{
+					r="No existe ese dia";
+					}
+				document.getElementById("resultado").innerHTML = r
+			}
+
+		</script>
+	</section>
+</body>
+</html>	
